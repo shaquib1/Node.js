@@ -1,0 +1,25 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "learning node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaquib1/Node.js.git"
+  },
+  "author": "shaquib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaquib1/Node.js/issues"
+  },
+  "homepage": "https://github.com/shaquib1/Node.js#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "color-js": "^1.0.5",
+    "nodemon": "^2.0.21",
+    "simple-node-logger": "^21.8.12"
+  }
+}
