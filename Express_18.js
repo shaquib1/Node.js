@@ -8,15 +8,16 @@ app.get('home',(req,res)=>{
 
 });
 
-app.get('/about',(req,res)=>{
-    res.send('Hello this is aboutus page');
+app.get('',(req,res)=>{
+    res.send(`<h1>render html on browser<h1>
+    <a href="/render"> about data page</a>`);
 
 });
 app.get('/help',(req,res)=>{
     res.send('Hello this is Help page');
 
 });
-app.get('/data',(req,res)=>{
+app.get('/fix',(req,res)=>{
     res.send('Hello this is data page');
 
 });
@@ -28,9 +29,9 @@ app.post('/login',(req,res)=>{
 
 // lecture 20
 //rendering html and json data on browser.
-app.get('',(req,res)=>{
+app.get('data',(req,res)=>{
    
-    res.send("<h1>render html on browser<h1>");
+    res.send("rendering html on browser");
 
 });
 
@@ -48,6 +49,7 @@ app.get('/render',(req,res)=>{
         }
     ]
     
+    <a href="/"> Go back home page</a>  
     
     `);
 
