@@ -27,7 +27,7 @@ app.post('/login',(req,res)=>{
 
 
 // lecture 20
-//rendering html and json data on browser
+//rendering html and json data on browser.
 app.get('',(req,res)=>{
    
     res.send("<h1>render html on browser<h1>");
