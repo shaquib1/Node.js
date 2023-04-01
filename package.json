@@ -19,6 +19,7 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "color-js": "^1.0.5",
+    "express": "^4.18.2",
     "nodemon": "^2.0.21",
     "simple-node-logger": "^21.8.12"
   }
