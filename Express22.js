@@ -13,7 +13,7 @@ app.get('',(req,res)=>{
     res.sendFile(`${publicpath}/about.html`);
 });
 
-// use ejs template
+// use ejs template lecture 23
 
 app.get('/profile',(req,res)=>{
    const user={
