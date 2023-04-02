@@ -12,4 +12,4 @@ app.get("", (req, res) => {
 
 app.use(express.static(publicpath));
 
-app.listen(2000);
+app.listen(3000);

@@ -12,4 +12,4 @@ app.get('/profile',(req, res)=>{
 
 });
 
-app.listen(2000);
+app.listen(6000);
