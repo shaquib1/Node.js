@@ -6,7 +6,7 @@ const dbconnect=require('./MongoDB31');
 const insert= async()=>{
   
     const db= await dbconnect();
-    const result = await db.insertOne(
+    const result = await db.insertMany(
        
         [ 
             {name:'Alam',branch:'cse',rollno:11202615},
@@ -15,7 +15,6 @@ const insert= async()=>{
     
     ]
            
-        
     );
 
     if(result.acknowledged){
