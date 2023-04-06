@@ -1,4 +1,4 @@
-// insert data from mongodb
+// insert data in mongodb
 
 const dbconnect=require('./MongoDB31');
 
