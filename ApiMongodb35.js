@@ -19,7 +19,7 @@ let data = await dbconnct();
 
 //post Api
 
-app.post('/',async(req,res)=>{
+app.post("/",async(req,res)=>{
  let data = await dbconnct();
  let result = await data.insertOne(req.body);
 
@@ -27,11 +27,18 @@ res.send(result)
 
 })
 
-// put api
+// put Api
 
-app.put('/',(req, res)=>{
+app.put("/", async (req, res)=>{
 
-  console.log({name:'shaquib'});
+  let data= await dbconnct();
+  let result= await data.updateOne(
+    {name:'ajit'},
+    {$set:req.body}
+    
+    )
+
+  res.send(result);
 })
 
 
