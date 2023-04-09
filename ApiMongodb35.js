@@ -3,6 +3,7 @@
 
 const express = require("express");
 const dbconnct = require("./MongoDB31");
+const mongodb=require('mongodb');
 const app = express();
 
 app.use(express.json());
@@ -33,7 +34,7 @@ app.put("/", async (req, res)=>{
 
   let data= await dbconnct();
   let result= await data.updateOne(
-    {name:'ajit'},
+    {name:'ajit kumar'},
     {$set:req.body}
     
     )
@@ -41,6 +42,18 @@ app.put("/", async (req, res)=>{
   res.send(result);
 })
 
+
+//delete api using parameter
+
+app.delete("/:id",async(req, res)=>{
+
+  console.log(req.params.id)
+  const data = await dbconnct();
+  const result= await data.deleteOne({_id: new mongodb.ObjectId(req.params.id)})
+
+  
+  res.send(result)
+})
 
 
 app.listen(5000);
