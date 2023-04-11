@@ -1,23 +1,47 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
+const main = async () => {
+  await mongoose.connect("mongodb://localhost:27017/erp-management-system");
 
-const main= async()=>{
+  const ProductSchema = new mongoose.Schema({
+    name: String,
+    sub: String,
+    rollno: Number,
+    id: Number,
+  });
 
-    await mongoose.connect("mongodb://localhost:27017/erp-management-system");   
+  const ProductModel = mongoose.model("students", ProductSchema);
+  let data = new ProductModel({
+    name: "shaquib",
+    sub: "andorid",
+    rollno: 11202263,
+    id: 123,
+  });
+  let result = await data.save();
+  console.log(result);
+};
 
-    const ProductSchema = new mongoose.Schema({
+const updateInDB = async () => {
+  const ProductModel = mongoose.model("students", ProductSchema);
+  let data = await ProductModel.updateOne(
+    {
+      name: "Nodejs tutorial",
+    },
+    {
+      $set: { rollno: 11202615 },
+    }
+  );
+  console.log(data);
+};
 
-    name:String,
-    sub:String
+const deleteInDB = async () => {
+  const ProductModel = mongoose.model("students", ProductSchema);
+  let data = await ProductModel.deleteOne({ name: "shaquib" });
+  console.log(data);
+};
 
-    });
+deleteInDB();
 
-    const ProductModel = mongoose.model('admin',ProductSchema);
-    let data =new ProductModel({name:"Nodejs tutorial",sub:"andorid"});
-    let result=await data.save();
-    console.log(result);
-
-
+const findInDB =()=>{
+  
 }
-
-main();
