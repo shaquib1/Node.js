@@ -7,12 +7,13 @@ const main= async()=>{
 
     const ProductSchema = new mongoose.Schema({
 
-    name:String
+    name:String,
+    sub:String
 
     });
 
     const ProductModel = mongoose.model('admin',ProductSchema);
-    let data =new ProductModel({name:"shreya"});
+    let data =new ProductModel({name:"Nodejs tutorial",sub:"andorid"});
     let result=await data.save();
     console.log(result);
 
